@@ -10,4 +10,11 @@ class ResultatRepository extends RessourceRepository{
         $this->model = $resultat;
     }
 
+    public function countByQuestion($question,$reponse){
+        return DB::table('resultats')
+        ->select($question. ' as question',$reponse.' as reponse', DB::raw('count(id) as nb'))
+        ->groupBy($question,$reponse)
+        ->get();
+    }
+
     }

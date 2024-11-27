@@ -10,7 +10,7 @@
 <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.0/css/bootstrapValidator.min.css'><link rel="stylesheet" href="./style.css">
 
 </head>
-<body>
+<body style="background-image: url({{asset('images/bande.png')}})">
 <!-- partial:index.partial.html -->
 <div class="container">
 
@@ -19,7 +19,7 @@
 <fieldset>
 
 <!-- Form Name -->
-<legend><center><h2><b>Titre Sondage</b></h2></center></legend><br>
+<legend><center>REPUBLIQUE DU SENEGAL<br><img src="{{ asset('images/drapeau.png') }}"><br> Ministère de l'intérieur<br><img src="{{ asset('images/logodge.png') }}" style="height: 70px;"><br><h4><b>Évaluation de l'Organisation des Élections Législatives Anticipées du 17 Novembre 2024 au Sénégal</b></h4></center></legend><br>
 
 <!-- Text input-->
 @if ($errors->any())

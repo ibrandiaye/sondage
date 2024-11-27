@@ -21,7 +21,24 @@ class ResultatController extends Controller
     public function index()
     {
         $resultats = $this->resultatRepository->getAll();
-        return view('home',compact('resultats'));
+        $questions1 = $this->resultatRepository->countByQuestion('q1','r1');
+        $questions2 = $this->resultatRepository->countByQuestion('q2','r2');
+
+        $questions3 = $this->resultatRepository->countByQuestion('q3','r3');
+
+        $questions4 = $this->resultatRepository->countByQuestion('q4','r4');
+
+      //  $questions5 = $this->resultatRepository->countByQuestion('q5','r5');
+
+      //  $questions6 = $this->resultatRepository->countByQuestion('q6','r6');
+
+       // $questions7 = $this->resultatRepository->countByQuestion('q7','r7');
+
+        $questions8 = $this->resultatRepository->countByQuestion('q8','r8');
+
+        //dd($rt);
+        return view('home',compact('resultats','questions1','questions2','questions3','questions4',
+    'questions7'))
     }
 
     /**
